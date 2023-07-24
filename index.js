@@ -1,7 +1,6 @@
-// script.js
+// JavaScript to add the "slide-in" class to the image when the page loads
+const slidingImage = document.getElementById('slidingImage');
 
-// Add an event listener to detect when the page has fully loaded
-window.addEventListener("load", function() {
-    const slideInText = document.querySelector(".slide-in-text");
-    slideInText.classList.add("slide-in"); // Add the slide-in class to trigger the sliding effect on page load
+window.addEventListener('load', () => {
+  slidingImage.classList.add('slide-in');
 });
