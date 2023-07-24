@@ -1,49 +1,109 @@
 body {
-    height: 100%;
     margin: 0;
-    width: 100%;
+    padding: 0;
     height: 150vh;
-    align-items: center;
+}
+
+nav {
+    background: transparent;
+    padding: 10px;
+}
+
+.navbar-container {
+    display: flex;
+    align-items: right;
+    justify-content: space-between;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-right: 50px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    
+}
+
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
+}
+
+.line {
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    margin: 5px;
+}
+
+.slidetext-container {
+    position: relative;
+    width: 40%;
+    /* Change this to your desired height */
+    height: 30%;
+    overflow: hidden;
+    /* Ensure that the image fits within the container */
+}
+
+.slide-in-text {
+    animation: 2s ease-out 0s 1 slideInLeft;
+    font-size: 50px;
+    padding-left: 3%;
+    color: white;
+}
+
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.image-conatainer {
+    position: relative;
+    width: 800px;
+    height: 800px;
+    overflow: hidden;
+}
+
+
+#slidingImage {
+    position: absolute;
+    top: 0;
+    padding-top: 90px;
+    padding-right: 50px;
+    right: -100%;
+    /* Start the image outside the container on the left */
+    width: 50%;
+    /* Set the image width to 100% of the container */
+    height: 60%;
+    /* Set the image height to 100% of the container */
+    transition: right 1s ease;
+    /* Adjust the duration and easing as needed */
+}
+
+/* Add the following CSS to slide the image in and make it remain there */
+#slidingImage.slide-in {
+    right: 0;
+    /* Set the final position of the image to be inside the container */
 }
 
 p {
     color: white;
-    font-size: 80px;
-    padding-left: 10%;
-
-}
-
-@keyframes slideInLeft {
-  0% {
-      transform: translateX(-100%);
-      }
-      100% {
-      transform: translateX(0);
-    }
-}
-    
-p {
-  animation: 2s ease-out 0s 1 slideInLeft;
-  padding: 40px;
-}  
-
-img {
-    max-width: 60%;
-    height: 400px;
-    padding: 20px;
-}
-
-.image {
-    display: flex;
-    /* Use flexbox for centering */
-    justify-content: right;
-    /* Horizontally center the image */
-    align-items: right;
-    /* Vertically center the image */
 }
 
 button {
-    padding: 10px 20px;
+    padding: 10px 50px;
     margin-left: 30px;
     font-size: 16px;
     background-color: white;
@@ -60,3 +120,17 @@ button:hover {
     transform: scale(1.05);
     /* Increase the button size by 10% on hover */
 }
+
+.text-container {
+    width: 700px;
+    height: 250px;
+    padding-top: 20px;
+    color: black;
+}
+
+.text-container h2,p {
+    width: 90%;
+    padding-left: 2%;
+    font-weight: bolder;
+}
+
