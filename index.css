@@ -3,11 +3,18 @@ body {
     padding: 0;
     height: auto;
     max-width: 100%;
+    overflow-x: hidden;
 }
 
 nav {
     background: transparent;
     padding: 10px;
+    justify-content: right;
+        color: #fff;
+            padding: 10px;
+            position: sticky;
+            z-index: 100;
+            top: 0;
 }
 
 .navbar-container {
@@ -45,23 +52,47 @@ nav {
     margin: 5px;
 }
 
+@media screen and (max-width: 600px) {
+    .hamburger-menu {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .nav-links.show {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: rgb(45, 100, 100);
+        padding: 10px 0;
+    }
+
+    .nav-links.show li {
+        margin: 10px;
+    }
+}
+
 .slidetext-container {
-    max-width: 60%;
-    /* Change this to your desired height */
-    height: 45%;
+    max-width: 50%;
+    height: auto;
     overflow: hidden;
-    /* Ensure that the image fits within the container */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .slide-in-text {
     animation: 2s ease-out 0s 1 slideInLeft;
-    font-size: 50px;
+    font-size: 3vw;
     float: left;
     padding-left: 3%;
     color: white;
     transition: transform 0.2s ease;
     max-width: 50%;
-    height: auto;
+    
 }
 .slide-in-text:hover {
     transform: scale(1.05);
@@ -80,7 +111,7 @@ nav {
 
 .image-container {
     position: relative;
-    max-width: 60%;
+    max-width: 30%;
     height: auto;
     overflow: hidden;
 }
@@ -92,19 +123,13 @@ nav {
     padding-top: 90px;
     padding-right: 50px;
     right: -100%;
-    /* Start the image outside the container on the left */
     max-width: 41%;
-    /* Set the image width to 100% of the container */
     height: auto;
-    /* Set the image height to 100% of the container */
     transition: right 1s ease;
-    /* Adjust the duration and easing as needed */
 }
 
-/* Add the following CSS to slide the image in and make it remain there */
 #slidingImage.slide-in {
     right: 0;
-    /* Set the final position of the image to be inside the container */
 }
 
 p {
@@ -117,7 +142,7 @@ p {
 }
 
 button {
-    padding: 10px 50px;
+    padding: 1% 2%;
     margin-left: 30px;
     font-size: 16px;
     background-color: white;
@@ -129,7 +154,6 @@ button {
     /* Add a smooth scaling transition on hover */
 }
 
-/* Scale the button on hover */
 button:hover {
     transform: scale(1.05);
     /* Increase the button size by 10% on hover */
@@ -150,10 +174,8 @@ button:hover {
 #icons-container {
     position: relative;
     max-width: 100%;
-    /* Change this to your desired height */
     height: auto;
     overflow: hidden;
-    /* Ensure that the image fits within the container */
     background-color: rgb(255, 255, 255)
 }
 
@@ -204,3 +226,12 @@ button:hover {
     font-weight: bolder;
     height: auto;
 }
+
+@media screen and (max-width: 768px) {
+    p,
+    button{
+        font-size: 14px;
+        /* Font size for smaller screens */
+    }
+}
+
