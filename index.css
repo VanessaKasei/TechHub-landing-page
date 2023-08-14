@@ -7,14 +7,14 @@ body {
 }
 
 nav {
-    background: transparent;
-    padding: 10px;
+    background-color: black;
     justify-content: right;
         color: #fff;
-            padding: 10px;
+            padding-bottom: 10px;
             position: sticky;
             z-index: 100;
             top: 0;
+            height: 5%;
 }
 
 .navbar-container {
@@ -48,7 +48,7 @@ nav {
 .line {
     max-width: 25px;
     height: 3px;
-    background-color: black;
+    background-color: rgb(233, 15, 15);
     margin: 5px;
 }
 
