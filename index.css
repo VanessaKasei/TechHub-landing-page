@@ -10,7 +10,7 @@ nav {
     background-color: black;
     justify-content: right;
         color: #fff;
-            padding-bottom: 10px;
+            padding: 10px;
             position: sticky;
             z-index: 100;
             top: 0;
@@ -52,7 +52,7 @@ nav {
     margin: 5px;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 600px) and (max-width: 990px) {
     .hamburger-menu {
         display: flex;
     }
@@ -228,7 +228,9 @@ button:hover {
 }
 
 @media screen and (max-width: 768px) {
-    body{
+    p,
+    button,
+    h2{
         font-size: 3vw;
         /* Font size for smaller screens */
     }
